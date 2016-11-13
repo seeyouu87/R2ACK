@@ -1,0 +1,50 @@
+<div class="panel panel-default">
+    <div class="panel-heading">
+         <!-- <label class="checkbox-inline">
+              <md-switch ng-model="showFull" aria-label="Show Full Columns?" class="md-primary">
+                  {{showFull?"Full Information: On":"Full Information: Off"}}
+              </md-switch>
+          </label>	  
+          <div ng-if="bond.tableParams.settings().counts.length" class="ng-table-counts btn-group panel-header-top-right"> <button ng-repeat="count in bond.tableParams.settings().counts" type="button" ng-class="{'active':bond.tableParams.count()==count}" ng-click="bond.tableParams.count(count);saveCount(count);" class="btn btn-default"> <span ng-bind="count"></span> </button> </div>
+          -->
+        <h1>Warren Buffet</h1>
+    </div>
+    <div class="panel-body">
+        <div class="table-responsive">
+
+            <h2 style="">Total Portfolio Value: 87,956,704.882</h2>
+
+            <table id="portfolio" class="table table-responsive">
+                <tbody><tr><th>Portfolio return</th><th>Portfolio variance</th><th>Total Cash</th><th>Total Stock Value</th><th>Total Bond Value</th></tr>
+                <tr><td>14.70%</td><td>0.02%</td><td>6,597,996</td><td>3,922,490.882</td><td>77,436,218</td></tr>
+                <tr><td colspan="5" align="center"><img src="/public/img/allocation.png"></td></tr>
+            </tbody>
+            </table>
+
+           <h2>Cash</h2>
+            <table class="table table-responsive">
+                <tr><td>USD Cash</td><td>6,597,996</td></tr></table>
+            <h2>Bonds</h2><table class="table table-responsive">
+            <tr><td>Instrument ID</td><td>Description</td><td>Quantity</td>
+                <td>Price</td><td>Value</td><td>Credit Risk Rating</td>
+                <td>Spread Risk Indicator</td></tr><tr><td>1441554</td><td>VZ.RB  9.9147 YRS</td><td>9000000</td>
+            <td>132.5</td><td>11925000.0</td><td>Moderate Default Risk</td><td>0.032781</td></tr><tr><td>10543040</td>
+            <td>GS.HUE  2.6602 YRS</td><td>6000000</td><td>108.131</td><td>6487860.0</td><td>Moderate Default Risk +</td>
+            <td>0.005387</td></tr><tr><td>20711163</td><td>GS3969873  3.1974 YRS</td><td>6000000</td><td>101.1275</td>
+            <td>6067650.0</td><td>Moderate Default Risk +</td><td>0.006144</td></tr><tr><td>21007167</td>
+            <td>GS3985460  10.4194 YRS</td><td>9000000</td><td>100.999</td><td>9089910.0</td><td>Low Default Risk</td>
+            <td>0.023845</td></tr><tr><td>21959199</td><td>JPM4035151  7.7994 YRS</td><td>5000000</td><td>99.355</td>
+            <td>4967750.0</td><td>Moderate Default Risk +</td><td>-0.002267</td></tr><tr><td>26210603</td>
+            <td>GS4189416  16.1045 YRS</td><td>10000000</td><td>101.1575</td><td>10115750.0</td><td>Moderate Default Risk +</td>
+            <td>0.024963</td></tr><tr><td>27108965</td><td>MSFT4211183  4.9296 YRS</td><td>4000000</td><td>101.198</td><td>4047920.0</td>
+            <td>Low Default Risk</td><td>0.00565</td></tr><tr><td>27763990</td><td>JPM4229104  0.1 YRS</td><td>7000000</td><td>86.5854</td>
+            <td>6060978.0</td><td>Moderate Default Risk +</td><td>-0.003983</td></tr><tr><td>29435621</td><td>JPM4283898  0.3 YRS</td><td>6000000</td><td>96.125</td>
+            <td>5767500.0</td><td>Low Default Risk</td><td>-0.003983</td></tr><tr><td>31402422</td><td>JPM4333069  0.4 YRS</td><td>7000000</td><td>100.0</td>
+            <td>7000000.0</td><td>Low Default Risk</td><td>-0.003983</td></tr><tr><td>31792273</td><td>JPM4344918  0.15 YRS</td><td>2000000</td><td>100.0</td><td>2000000.0</td>
+            <td>Low Default Risk</td><td>-0.003983</td></tr><tr><td>31792276</td><td>JPM4347289  0.2 YRS</td><td>3000000</td><td>100.0</td><td>3000000.0</td>
+            <td>Low Default Risk</td><td>-0.003983</td></tr>
+            <tr><td>34518894</td><td>GS4423237  9.3575 YRS</td><td>10000000</td><td>99.059</td><td>9905900.0</td><td>Moderate Default Risk +</td><td>0.016575</td></tr></table>
+            <h2>Stocks</h2><table class="table table-responsive"><tr><td>Instrument ID</td><td>Description</td><td>Quantity</td><td>Price</td><td>Value</td><td>Risk (Volatility)</td></tr><tr><td>US17275R1023</td><td>Cisco Systems Inc</td><td>2461</td><td>31.2</td><td>76783.2</td><td>32%</td></tr><tr><td>US2546871060</td><td>Walt Disney</td><td>7668</td><td>94.1</td><td>721558.8</td><td>29%</td></tr><tr><td>US30231G1022</td><td>Exxon Mobil Corp</td><td>4132</td><td>88.2</td><td>364442.4</td><td>22%</td></tr><tr><td>US3696041033</td><td>General Electric Co</td><td>5110</td><td>30.1</td><td>153811.0</td><td>24%</td></tr><tr><td>US4370761029</td><td>Home Depot</td><td>2949</td><td>131.2</td><td>386908.8</td><td>21%</td></tr><tr><td>US46625H1005</td><td>JPMorgan Chase & Co</td><td>9373</td><td>66.8</td><td>626116.4</td><td>30%</td></tr><tr><td>US58933Y1055</td><td>Merck & Co Inc</td><td>9231</td><td>62.8</td><td>579706.8</td><td>33%</td></tr><tr><td>US7427181091</td><td>Procter & Gamble Co</td><td>4528</td><td>87.1</td><td>394388.8</td><td>18%</td></tr><tr><td>US88579Y1010</td><td>3M Co</td><td>533</td><td>100.1</td><td>53353.3</td><td>19%</td></tr><tr><td>US91324P1021</td><td>Boeing</td><td>3834</td><td>135.4</td><td>519123.6</td><td>34%</td></tr></table>
+        </div>
+    </div>
+</div>

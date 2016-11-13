@@ -1,0 +1,68 @@
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h2>Client Details</h2><!--<md-button class="md-primary md-raised"   >Show Description</md-button>-->
+    </div>
+    <div class="panel-body">
+        <uib-accordion close-others="oneAtATime">
+            <div uib-accordion-group class="panel-default" is-open="true" heading="Basic Information">
+                <div class="alert alert-danger" ng-show="data.pep=='Yes'">This is a politically exposed person. Seek management approval for all transaction.</div>
+                <table class="table table-responsive">
+                    <tr>
+                        <td colspan="2" rowspan="4"><img width="250px" ng-src="public/img/{{data.img}}" /></td>
+                        <th>Name:</th>
+                        <td>{{data.name}}</td>
+                    </tr>
+                    <tr>
+                        <th>Age:</th>
+                        <td>{{data.age}}</td>
+                    </tr>
+                    <tr>
+                        <th>Gender:</th>
+                        <td>{{data.sex}}</td>
+
+                    </tr>
+                    <tr><th>Annual income:</th>
+                        <td>{{data.salary}}</td></tr>
+                    <tr><th>Country:</th>
+                        <td>{{data.country}}</td>
+                        <th>Net Worth:</th>
+                        <td>{{data.netw}}</td>
+                    </tr>
+                    <tr><th>Marital Status:</th>
+                        <td>{{data.marital}}</td>
+                        <th>No of Child:</th>
+                        <td>{{data.child}}</td>
+                    </tr>
+                    <tr>
+                        <td colspan="4" wrap>
+                        <h2>Bio:</h2>
+                        <textarea name="bio" style="width:100%;min-height:250px;">{{data.bio}}</textarea>
+                        </td>
+                    </tr>
+
+                </table>
+                <md-button class="md-primary md-raised" ng-click="showAlert($event, data.bio)">Analyze Personality
+            </md-button>
+            </div>
+
+            <div uib-accordion-group class="panel-default" is-open="true" heading="Assets Under Management">
+                <md-button class="md-primary md-raised" ng-click="retrievePortfolio(data.clientId)">Retrieve Portfolio Analytics</md-button>
+                <h2 ng-show="portfolio.cash>0">Total Portfolio Value: {{portfolioTotal | number}}</h2>
+                <table id="portfolio" class="table table-responsive" ng-show="portfolio.cash>0">
+                    <tr><th>Portfolio return</th><th>Portfolio variance</th><th>Total Cash</th><th>Total Stock Value</th><th>Total Bond Value</th></tr>
+                    <tr><td>{{portfolio.ret|pct}}</td><td>{{portfolio.var|pct}}</td><td>{{portfolio.cash|number}}</td><td>{{portfolio.stock|number}}</td><td>{{portfolio.bond|number}}</td></tr>
+                    <tr><td colspan="5" align="center"><img src="/public/img/allocation.png" /></td></tr>
+                </table>
+            </div>
+            <div uib-accordion-group class="panel-default" is-open="true" heading="Client Risk">
+                <table class="table table-responsive">
+                    <tr><th>Due Diligence:</th><td>{{data.due}}</td><th>Number of Unusual Trade:</th><td>{{data.numut}}</td></tr>
+                    <tr><th>Number of suspicious activity report:</th><td>{{data.sar}}</td><th>Politically exposed person:</th><td>{{data.pep}}</td></tr>
+                    <tr><th>ID verified:</th><td>{{data.verify}}</td><th>Risk appetite:</th><td>{{data.riskAp}}</td></tr>
+                </table>
+            </div>
+        </uib-accordion>
+    </div>
+</div>
+            
+       

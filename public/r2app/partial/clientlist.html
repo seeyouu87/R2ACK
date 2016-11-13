@@ -1,0 +1,51 @@
+<div class="panel panel-default">
+    <div class="panel-heading">
+         <!-- <label class="checkbox-inline">
+              <md-switch ng-model="showFull" aria-label="Show Full Columns?" class="md-primary">
+                  {{showFull?"Full Information: On":"Full Information: Off"}}
+              </md-switch>
+          </label>	  
+          <div ng-if="bond.tableParams.settings().counts.length" class="ng-table-counts btn-group panel-header-top-right"> <button ng-repeat="count in bond.tableParams.settings().counts" type="button" ng-class="{'active':bond.tableParams.count()==count}" ng-click="bond.tableParams.count(count);saveCount(count);" class="btn btn-default"> <span ng-bind="count"></span> </button> </div>
+          -->
+        <h1>Client List</h1>
+    </div>
+    <div class="panel-body">
+        <div class="table-responsive">
+            <md-input-container class="md-icon-float md-block">
+                <label>Search client ID</label>
+                <input type="text" name="searchId" ng-model="search.clientId" placeholder="Key in client ID to search"/>
+              </md-input-container>
+            <table ng-table="cli.tableParams" class="table table-bordered table-hover" id="tables-resultM" style="border-radius:10px;">
+                <thead>
+                    <tr style="background-color:#3f51b5;color:rgba(255,255,255,0.87);">
+                        <th> Client ID </th>
+                        <th> Client Name </th>
+                        <th> Age </th>
+                        <th> Sex </th>
+                        <th> Monthly Salary </th>
+                        <th> Country </th>
+                        <th> Action </th>
+                       <!-- <th> Theoretical Price </th>
+                        <th> Last Close Price </th>
+                        <th> Last Trade Date </th>
+                        <th> Coupon Rate (%) </th>-->
+
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="item in $data | filter:search" data-bind="Loading...">
+                        <td title="Bond Id" >{{item["clientId"]}}</td>
+                        <td title="Client Name" >{{item["name"]}}</td>
+                        <td title="Age" >{{item["age"]}}</td>
+                        <td title="Sex" >{{item["sex"]}}</td>
+                        <td title="Monthly Salary" >{{item["salary"]}}</td>
+                        <td title="Country" >{{item["country"]}}</td>
+                        <td title="Action"><md-button class="md-raised md-primary" ng-click="browse(item.clientId)">Browse</md-button></td>
+
+                    </tr>
+                </tbody>
+            </table>
+            <!--<div flex class="inset center md-chip" ng-show="isLoading">Loading.... <img src="/assets/img/spinner.gif" alt="Loading" width="20px" /></div>-->
+        </div>
+    </div>
+</div>

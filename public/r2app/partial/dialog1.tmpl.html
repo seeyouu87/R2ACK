@@ -1,0 +1,39 @@
+
+<md-dialog aria-label="Personality Analytics">
+  <form ng-cloak>
+    <md-toolbar>
+      <div class="md-toolbar-tools">
+        <h2>Personality Analytics</h2>
+        <span flex></span>
+        <md-button class="md-icon-button" ng-click="cancel()">
+          <md-icon md-svg-src="public/img/ic_close_24px.svg" aria-label="Close dialog">x</md-icon>
+        </md-button>
+      </div>
+    </md-toolbar>
+
+    <md-dialog-content>
+      <div class="md-dialog-content">
+        <div class="row">
+            <img style="margin-left:60px;" id="loader" src="public/img/watson.gif">
+          <table id="personalityRes">
+            <tr ng-repeat="item in big5">
+              <th>{{item.name}}:</th>
+              <th>{{item.percentage | pct}}</th>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </md-dialog-content>
+
+    <md-dialog-actions layout="row">
+
+      <span flex></span>
+      <md-button ng-click="answer('Risk taker')">
+       Risk Taker
+      </md-button>
+      <md-button ng-click="answer('Non risk taker')">
+        Non Risk Taker
+      </md-button>
+    </md-dialog-actions>
+  </form>
+</md-dialog>

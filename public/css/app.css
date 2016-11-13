@@ -1,0 +1,72 @@
+/*
+@import url(http://fonts.googleapis.com/earlyaccess/notosanssc.css);
+
+body {
+  font-family: 'Noto Sans SC', sans-serif;
+}
+*/
+th.header{
+  background-color:rgb(63,81,181);color:rgba(255,255,255,0.87);
+}
+
+#footer {
+  align-self: flex-end;
+  padding: 16px 32px;
+  width: 100%;
+
+  text-align: center;
+  font-size: small;
+  border-top: 1px solid #ddd;
+}
+
+.md-list-item-active {
+  color: #333;
+  background-color: #e6e6e6;
+  border-color: #8c8c8c;
+}
+
+.toolbar-rmi-logo{
+  width: 120px;
+  margin-left:25px;
+}
+
+.md-3-line{
+    height:40px !important;
+    min-height:30px !important;
+}
+
+.md-3-line:hover{
+    background:#e7e7e7;
+}
+
+.nav-header{
+    margin-top:25px;
+}
+
+.md-sidenav-left{
+    width:200px !important;
+}
+
+/*
+@media (max-width: 600px) {
+.docs-logo{
+    width: 85px;
+    overflow: hidden;
+}
+}
+*/
+
+.panel-header-top-right{
+    float:right;
+    padding-top:20px;
+}
+
+td{
+  white-space: nowrap;
+}
+
+#th-override-bs th{
+  text-align: center;
+  white-space: pre-line;
+  vertical-align: middle;
+}

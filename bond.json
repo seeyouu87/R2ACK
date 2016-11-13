@@ -1,0 +1,144 @@
+{
+  "subject": "bonds",
+  "columns": [
+    {
+      "key": "rating",
+      "type": "numeric",
+      "goal": "min",
+      "is_objective": true,
+      "full_name": "bond rating",
+      "range": {
+        "low": 2,
+        "high": 11
+      },
+      "format": "number"
+    },
+    {
+      "key": "spread",
+      "type": "numeric",
+      "goal": "max",
+      "is_objective": true,
+      "full_name": "credit spread",
+      "range": {
+        "low": -1,
+        "high": 1
+      },
+      "format": "number"
+    },
+    {
+      "key": "short",
+      "type": "numeric",
+      "goal": "min",
+      "is_objective": false,
+      "full_name": "short term trading",
+      "range": {
+        "low": 1,
+        "high": 30
+      },
+      "format": "number"
+    },{
+      "key": "long",
+      "type": "numeric",
+      "goal": "max",
+      "is_objective": true,
+      "full_name": "long term trading",
+      "range": {
+        "low": 0,
+        "high": 30
+      },
+      "format": "number"
+    }
+  ],
+  "options": [
+    {
+      "key": "AAPL4208638",
+      "name": "AAPL4208638",
+      "values": {
+        "rating": 6,
+        "spread": 0.000217119,
+        "short": 3,
+        "long": 3
+      }
+    },
+    {
+      "key": "AAPL4122386",
+      "name": "AAPL4122386",
+      "values": {
+        "rating": 6,
+        "spread": 0.02529,
+        "short": 16,
+        "long": 16
+      }
+    },
+    {
+      "key": "BA.IS",
+      "name": "BA.IS",
+      "values": {
+        "rating": 8,
+        "spread": 0.027899311,
+        "short": 14,
+        "long": 14
+      }
+    },
+    {
+      "key": "BA4306057",
+      "name": "BA4306057",
+      "values": {
+        "rating": 8,
+        "spread": 0.001627648,
+        "short": 4,
+        "long": 4
+      }
+    },
+    {
+      "key": "4100888",
+      "name": "CSCO4100888",
+      "values": {
+        "rating": 5,
+        "spread": 0.004028826,
+        "short": 4.5,
+        "long": 4.5
+      }
+    },
+    {
+      "key": "CSCO4100888",
+      "name": "CSCO4100888",
+      "values": {
+        "rating": 5,
+        "spread": 0.004028826,
+        "short": 4.5,
+        "long": 4.5
+      }
+    },
+    {
+      "key": "GS.AEH",
+      "name": "GS.AEH",
+      "values": {
+        "rating": 10,
+        "spread": 0.009152057,
+        "short": 4.5,
+        "long": 4.5
+      }
+    },
+    {
+      "key": "IBM4336429",
+      "name": "IBM4336429",
+      "values": {
+        "rating": 7,
+        "spread": 0.026162965,
+        "short": 16.5,
+        "long": 16.5
+      }
+    },
+    {
+      "key": "JNJ4186057",
+      "name": "JNJ4186057",
+      "values": {
+        "rating": 2,
+        "spread": 0.001972857,
+        "short": 4.7,
+        "long": 4.7
+      }
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+---
+declared-services:
+  personality-insights-service:
+    label: personality_insights
+    plan: tiered
+  tradeoff-analytics-standard-service:
+    label: tradeoff_analytics
+    plan: standard
+
+applications:
+- name: r2ack
+  command: python server.py
+  path: .
+  memory: 256M
+  services:
+  - personality-insights-service
+  - tradeoff-analytics-standard-service

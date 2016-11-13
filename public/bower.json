@@ -1,0 +1,20 @@
+{
+  "name": "rmi-pricing-tool",
+  "description": "RMI pricing tool",
+  "version": "0.0.0",
+  "dependencies": {
+    "angular": "1.5.x",
+    "angular-animate": "1.5.x",
+    "angular-mocks": "1.5.x",
+    "angular-resource": "1.5.x",
+    "angular-route": "1.5.x",
+    "angular-translate": "1.x.x",
+    "bootstrap": "3.3.x",
+    "jquery": "2.2.x",
+    "ng-table": "1.0.0",
+    "ngInfiniteScroll": "1.0.x",
+    "angular-material": "1.1.x",
+    "angular-cookies": "1.x.x",
+    "angular-horizontal-timeline": "*"
+  }
+}

@@ -1,0 +1,34 @@
+<div class="panel panel-default">
+    <div class="panel-heading">
+         <!-- <label class="checkbox-inline">
+              <md-switch ng-model="showFull" aria-label="Show Full Columns?" class="md-primary">
+                  {{showFull?"Full Information: On":"Full Information: Off"}}
+              </md-switch>
+          </label>	  
+          <div ng-if="bond.tableParams.settings().counts.length" class="ng-table-counts btn-group panel-header-top-right"> <button ng-repeat="count in bond.tableParams.settings().counts" type="button" ng-class="{'active':bond.tableParams.count()==count}" ng-click="bond.tableParams.count(count);saveCount(count);" class="btn btn-default"> <span ng-bind="count"></span> </button> </div>
+          -->
+        <h1>Recommendation</h1>
+    </div>
+    <div class="panel-body">
+        <div class="table-responsive">
+            <uib-accordion close-others="oneAtATime">
+                <div uib-accordion-group class="panel-default" is-open="true" heading="Credit Risk Evaluation and Recommendation">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <img style="width:100%; padding:10px 10px 10px 10px;" src="/public/img/credit_risk.png" /></div>
+                        <div class="col-md-6">
+                            <md-button class="md-primary md-raised" ng-click="getRecommendation()">
+                            Get Recommendation From Watson TradeOff Analytics
+                        </md-button>
+                        <table class="table table-responsive" ng-show="recommend.length>0">
+                            <tr><th>No.#</th><th>Recommended Bonds</th></tr>
+                            <tr ng-repeat="r in recommend"><td>{{($index+1)}}</td><td>{{r}}</td></tr>
+                        </table>
+                        </div>
+                    </div>
+
+                </div>
+            </uib-accordion>
+        </div>
+    </div>
+</div>
